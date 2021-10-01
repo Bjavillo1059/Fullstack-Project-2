@@ -21,7 +21,7 @@ User.init(
       allowNull: false,
       unique: true,
       validate: {
-        len: [3],
+        len: [16],
       },
     },
     password: {
@@ -30,6 +30,10 @@ User.init(
       validate: {
         len: [16],
       },
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     bio: {
       type: DataTypes.STRING,
