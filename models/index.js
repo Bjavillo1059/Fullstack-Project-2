@@ -8,4 +8,4 @@ User.hasMany(Events, {
 
 Events.belongsTo(User, )
 
-module.exports = { User, Events }
+module.exports = { User, Events, Business }
