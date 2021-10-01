@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
 const seedEvents = require('./eventsData');
-const seedGallery = require('./galleryData');
+const seedUser = require('./userData');
 const seedOrgUser = require('./orgUserData');
-const seedPaintings = require('./paintingData');
+
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
