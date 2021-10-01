@@ -1,7 +1,7 @@
 {
   "name": "Fullstack-Project-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "social media site\r     - bringing like minded people together\r     - make a profile\r     - kind of like yelp\r     - post events \r     - make an account with small business owners\r         - owners can add",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,5 +24,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bjavillo1059/Fullstack-Project-2.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Bjavillo1059/Fullstack-Project-2/issues"
+  },
+  "homepage": "https://github.com/Bjavillo1059/Fullstack-Project-2#readme"
 }
