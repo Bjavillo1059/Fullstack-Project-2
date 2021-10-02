@@ -10,6 +10,9 @@ router.get("/", async (req, res) => {
 router.get("login", async (req, res) => {
   return res.render("login");
 });
+router.get("/user", (req, res) => {
+  res.render("user");
+});
 
 router.post("login", async (req, res) => {
   try {
