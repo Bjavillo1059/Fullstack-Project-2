@@ -28,7 +28,7 @@ Events.init(
       defaultValue: DataTypes.NOW,
     },
     author: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         references: {
             model: 'user',
             key: 'id'
