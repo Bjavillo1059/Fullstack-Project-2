@@ -1,12 +1,14 @@
 const router = require("express").Router();
-const { Events, User, OrgUser } = require("../models");
+const User = require("../models/User.js");
+const Events = require("../models/Events.js");
+const OrgUser = require("../models/OrgUser.js");
 
-router.get("/", (req, res) => {
-  res.render("home");
+router.get("/", async (req, res) => {
+  return res.render("home");
 });
 
-router.get("login", (req, res) => {
-  res.render("login");
+router.get("login", async (req, res) => {
+  return res.render("login");
 });
 
 router.post("login", async (req, res) => {
@@ -46,8 +48,7 @@ router.get("/home", (req, res) => {
   res.render("home");
 });
 
-router.post("/home"),
-  (req, res) => {
+router.post("/home"), async (req, res) => {
     try {
       const user = await User.create(req.body);
       res.redirect("/home");
