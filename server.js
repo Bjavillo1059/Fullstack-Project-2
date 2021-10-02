@@ -10,11 +10,11 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 const app = express();
-const PORT = process.env.PORT || 3006;
+const PORT = process.env.PORT || 3308;
 
 // Sets up session and connect to our Sequelize db
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'G-14 classified secret',
   // Express session will use cookies by default, but we can specify options for those cookies by adding a cookies property to our session options.
   cookie: {
     // maxAge sets the maximum age for the session to be active. Listed in milliseconds.

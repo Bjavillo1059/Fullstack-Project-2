@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { BlogPost, User } = require("../models");
+const { Events, User, OrgUser } = require("../models");
 
 router.get("/", (req, res) => {
   res.render("home");
@@ -24,6 +24,7 @@ router.post("login", async (req, res) => {
     if (isValid) {
         req.session.save (() => {
         req.session.is_logged_in = true
+        req.session.email = true,
         req.session.user = {
             username: userData.username,
             bio: userData.bio,
@@ -31,8 +32,8 @@ router.post("login", async (req, res) => {
     });
       console.log(userData);
     } else {
-      console.log("poop");
-      res.render("/login", { message: "chiggity check yo password" });
+      console.log("try again");
+      res.render("/login", { message: "please check your password" });
     }
   } catch (err) {
     console.log(err);
@@ -41,15 +42,15 @@ router.post("login", async (req, res) => {
   res.redirect("/login");
 });
 
-router.get("/register", (req, res) => {
-  res.render("register");
+router.get("/home", (req, res) => {
+  res.render("home");
 });
 
-router.post("/register"),
+router.post("/home"),
   (req, res) => {
     try {
       const user = await User.create(req.body);
-      res.redirect("/register");
+      res.redirect("/home");
     } catch (err) {
       console.log(err);
     }
