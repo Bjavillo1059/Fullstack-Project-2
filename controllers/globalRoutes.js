@@ -8,6 +8,9 @@ router.get("/", (req, res) => {
 router.get("login", (req, res) => {
   res.render("login");
 });
+router.get("/user", (req, res) => {
+  res.render("user");
+});
 
 router.post("login", async (req, res) => {
   try {
@@ -47,7 +50,7 @@ router.get("/home", (req, res) => {
 });
 
 router.post("/home"),
-  (req, res) => {
+ async (req, res) => {
     try {
       const user = await User.create(req.body);
       res.redirect("/home");
