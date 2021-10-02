@@ -1,18 +1,19 @@
-// const sequelize = require('../config/connection');
-// const seedUsers = require('./userData');
-// const seedOrgs = require('./orgsData');
-// const seedEvents = require('./eventsData');
+const sequelize = require('../config/connection');
+const seedEvents = require('./eventsData');
+const seedUser = require('./userData');
+const seedOrgUser = require('./orgUserData');
 
-// const seedAll = async () => {
-//   await sequelize.sync({ force: true });
 
-//   await seedUsers();
+const seedAll = async () => {
+  await sequelize.sync({ force: true });
 
-//   await seedOrgs();
+  await seedUser();
 
-//   await seedEvents();
+  await seedOrgUser();
 
-//   process.exit(0);
-// };
+  await seedEvents();
 
-// seedAll();
+  process.exit(0);
+};
+
+seedAll();
