@@ -5,11 +5,11 @@ router.get("/", (req, res) => {
   res.render("home");
 });
 
-router.get("login", (req, res) => {
+router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.post("login", async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { username: req.body.username },
@@ -47,7 +47,7 @@ router.get("/home", (req, res) => {
 });
 
 router.post("/home"),
-  (req, res) => {
+  async(req, res) => {
     try {
       const user = await User.create(req.body);
       res.redirect("/home");
