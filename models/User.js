@@ -35,7 +35,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    bio: {
+    hobbies: {
       type: DataTypes.STRING,
       allowNull: false,
     }

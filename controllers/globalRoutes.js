@@ -1,8 +1,10 @@
 const router = require("express").Router();
-const { Events, User, OrgUser } = require("../models");
+const User = require("../models/User.js");
+const Events = require("../models/Events.js");
+const OrgUser = require("../models/OrgUser.js");
 
-router.get("/", (req, res) => {
-  res.render("home");
+router.get("/", async (req, res) => {
+  return res.render("home");
 });
 
 router.get("/login", (req, res) => {
