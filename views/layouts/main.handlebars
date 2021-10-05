@@ -1,38 +1,45 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freshcapade</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freshcapade</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
 
-<body>
-  <header>
-    <h1>Freshcapade</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="views\login.handlebars">Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    <aside>
-      <h2>Events gallery</h2>
-    </aside>
-    <div class="gallery">
-      {{{body}}}
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Freshcapade</h1>
+        <h2>Your one stop spot!</h2>
+      </header>
+
+      <nav id="nav-bar">
+        <ul class="main_menu">
+          <li><a class="nav-link" href="/">Home</a></li>
+
+          <li><a class="nav-link" href="#">Logout</a></li>
+
+          <li><a class="nav-link" href="/login">Login</a></li>
+
+          <li><a class="nav-link" href="#">About</a></li>
+
+        </ul>
+      </nav>
     </div>
-  </main>
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+    <main>
+      <div class="gallery">
+        {{{body}}}
+      </div>
+    </main>
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>
