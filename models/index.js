@@ -1,5 +1,6 @@
-const User = require('./User');
-const Events = require('./Events');
+const User = require('./User')
+const Events = require('./Events')
+const OrgUser = require('./OrgUser')
 
 User.hasMany(Events, {
     foreignKey: 'author',
@@ -8,4 +9,4 @@ User.hasMany(Events, {
 
 Events.belongsTo(User, )
 
-module.exports = { User, Events }
+module.exports = { User, Events, }

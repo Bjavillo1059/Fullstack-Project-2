@@ -7,14 +7,11 @@ router.get("/", async (req, res) => {
   return res.render("home");
 });
 
-router.get("login", async (req, res) => {
-  return res.render("login");
-});
-router.get("/user", (req, res) => {
-  res.render("user");
+router.get("/login", (req, res) => {
+  res.render("login");
 });
 
-router.post("login", async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { username: req.body.username },
@@ -51,10 +48,24 @@ router.get("/home", (req, res) => {
   res.render("home");
 });
 
-router.post("/home"), async (req, res) => {
+router.post("/home"),
+  async(req, res) => {
     try {
       const user = await User.create(req.body);
       res.redirect("/home");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+router.get("/user", (req, res) => {
+  res.render("user");
+});
+
+router.post("/user"), async (req, res) => {
+    try {
+      const user = await User.create(req.body);
+      res.redirect("/user");
     } catch (err) {
       console.log(err);
     }
