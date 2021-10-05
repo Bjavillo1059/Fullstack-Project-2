@@ -57,4 +57,17 @@ router.post("/home"), async (req, res) => {
     }
   };
 
+router.get("/user", (req, res) => {
+  res.render("user");
+});
+
+router.post("/user"), async (req, res) => {
+    try {
+      const user = await User.create(req.body);
+      res.redirect("/user");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
 module.exports = router;
