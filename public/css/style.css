@@ -1,3 +1,76 @@
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    text-align: center;
+    margin: auto;
+}
+
+.friends-list,
+.hobby1-list,
+.hobby2-list,
+.hobby3-list {
+    padding-left: 60px;
+    border-left: 1px solid white;
+}
+
+.friend-square,
+.hobby1-square,
+.hobby2-square,
+.hobby3-square {
+    border: 6px solid white;
+    text-align: center;
+    height: 150px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.userBtn {
+    margin-left: 50px;
+}
+
+.logo {
+    margin-left: 40px;
+    text-align: center;
+    padding: 5px 10px;
+    border: 3px solid white;
+}
+
+.userBtn button {
+    padding: 30px;
+    border-radius: 100px;
+}
+
+.savedEvents-list li,
+.savedCoupons-list li{
+    list-style: none;
+    border: 1px solid white;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+.savedEvents-list {
+    margin-bottom: 50px;
+}
+
+.userBody {
+    background-color: rgba(0, 0, 146, 0.842);
+    color: white;
+    padding: 0px 10px;
+    width: 100%;
+}
 /* LOGIN HANDLEBARS */
 
 #wrapper {
@@ -111,3 +184,4 @@ ul.main_menu {
 /* USER HANDLEBAR */
 
 /* ORG HANDLEBAR */
+
