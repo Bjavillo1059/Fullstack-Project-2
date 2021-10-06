@@ -24,8 +24,9 @@
     border: 6px solid white;
     text-align: center;
     height: 150px;
-    width: 200px;
-    margin-bottom: 10px;
+    padding: 32px;
+    margin: 0 auto;
+    max-width: 960px;
 }
 
 h2 {
@@ -68,8 +69,9 @@ a {
 .userBody {
     background-color: rgba(0, 0, 146, 0.842);
     color: white;
-    padding: 0px 10px;
-    width: 100%;
+    padding: 32px;
+    margin: 0 auto;
+    max-width: 960px;
 }
 /* LOGIN HANDLEBARS */
 

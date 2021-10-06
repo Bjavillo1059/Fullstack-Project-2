@@ -20,16 +20,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      validate: {
-        len: [16],
-      },
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [16],
-      },
     },
     email: {
       type: DataTypes.STRING,
@@ -37,7 +31,6 @@ User.init(
     },
     hobbies: {
       type: DataTypes.STRING,
-      allowNull: false,
     }
   },
   {

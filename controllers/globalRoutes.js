@@ -63,26 +63,26 @@ router.get("/user", (req, res) => {
   res.render("user");
 });
 
-router.post("/user"), async (req, res) => {
+router.post("/api/users", async (req, res) => {
     try {
       const user = await User.create(req.body);
-      res.redirect("/user");
+      res.render("user");
     } catch (err) {
       console.log(err);
     }
-  };
+  });
 
 router.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-router.post("/contact"), async (req, res) => {
+router.post("/contact", async (req, res) => {
     try {
       const user = await Contact.create(req.body);
-      res.redirect("/contact");
+      res.render("contact");
     } catch (err) {
       console.log(err);
     }
-  };
+  });
 
 module.exports = router;

@@ -1,8 +1,3 @@
-// username: username.value,
-//         email: email.value,
-//         subject: subject.value,
-//         message: message.value
-
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
@@ -54,7 +49,7 @@ Contact.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "contact",
   }
 );
 
