@@ -1,16 +1,69 @@
-<div>
+<div class="flex-row userBody">
     {{!-- left side of browser showing User account button, saved events, saved coupons, app logo --}}
-    <div class="raw justify-space-between-md">
-        <div class="Friends">
-            <h2 class="Hobby#1">
-                <h3 class="Hobby#2">
-                    <h4 class="Hobe#3">
-                    </h4>
-                </h3>
-            </h2>
+    <aside class="user-aside "> 
+        <h1 class="logo">Logo</h1>
+        <div class="userBtn">
+            {{!-- Button for User Acct or A Tag --}}
+            <button></button>
+        </div>
+        <ul class="savedEvents-list">
+            {{!-- for each saved event as li tag --}}
+            <li><a href="/">Saved Event</a></li>
+            <li><a href="/">Saved Event</a></li>
+            <li><a href="/">Saved Event</a></li>
+        </ul>
+        <ul class="savedCoupons-list">
+            {{!-- for each saved coupon as li tag --}}
+            <li><a href="/">Saved Coupon</a></li>
+            <li><a href="/">Saved Coupon</a></li>
+            <li><a href="/">Saved Coupon</a></li>
+
+        </ul>
+    </aside>
+    {{!-- Friends Colum --}}
+    <div class="column friends-list">
+        <h2>FRIENDS</h2>
+        {{!-- for each friend create div structure --}}
+        <div class="friend-square">
+            <h3>friend name</h3>
+        </div>
+        <div class="friend-square">
+            <h3>friend name</h3>
         </div>
     </div>
+    <div class="column hobby1-list">
+        <h2>HOBBY #1</h2>
+        {{!-- for each Hobby create div structure --}}
+        <div class="hobby1-square">
+            <h3>Hobby 1 Sample</h3>
+        </div>
+        <div class="hobby1-square">
+            <h3>Hobby 1 Sample</h3>
+        </div>
+    </div>
+    <div class="column hobby2-list">
+        <h2>HOBBY #2</h2>
+        {{!-- for each hobby create div structure --}}
+        <div class="hobby2-square">
+            <h3>Hobby 2 Sample</h3>
+        </div>
+         <div class="hobby2-square">
+            <h3>Hobby 2 Sample</h3>
+        </div>
+    </div>
+        <div class="column hobby3-list">
+        <h2>HOBBY #3</h2>
+        {{!-- for each hobby create div structure --}}
+        <div class="hobby3-square">
+            <h3>Hobby 3 Sample</h3>
+        </div>
+        <div class="hobby3-square">
+            <h3>Hobby 3 Sample</h3>
+        </div>
+    </div>
+
 </div>
+
 <div>
     {{!-- mutual friends list --}}
     <body>
@@ -28,4 +81,4 @@
 </div>
 <div>
     {{!-- hobby input with three columns --}}
-</div>
+</div> 
