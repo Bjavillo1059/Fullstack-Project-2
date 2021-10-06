@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User.js");
 const Events = require("../models/Events.js");
 const OrgUser = require("../models/OrgUser.js");
+const Contact = require("../models/Contact.js");
 
 router.get("/", async (req, res) => {
   return res.render("home");
@@ -66,6 +67,19 @@ router.post("/user"), async (req, res) => {
     try {
       const user = await User.create(req.body);
       res.redirect("/user");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+router.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
+router.post("/contact"), async (req, res) => {
+    try {
+      const user = await Contact.create(req.body);
+      res.redirect("/contact");
     } catch (err) {
       console.log(err);
     }
