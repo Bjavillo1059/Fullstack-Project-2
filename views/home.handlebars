@@ -1,41 +1,105 @@
 <div class="flex-row userBody">
-    {{!-- Friends Colum --}}
-    <div class="column search-results">
-        <h2>Search Results</h2>
-        
+  {{! Friends Colum }}
+  <div class="column search-results">
+    <h2>Search Results</h2>
+
+  </div>
+  <div class="column hobby1-list">
+    <h2>{{userBody}}</h2>
+    {{! for each Hobby create div structure }}
+    <select
+      class="form-select form-select-lg mb-3"
+      aria-label=".form-select-lg example">
+      <option selected>Open this select menu</option>
+      <option value="1">Business</option>
+      <option value="2">Food&Drink</option>
+      <option value="3">Health</option>
+      <option value="4">Music</option>
+      <option value="5">Auto,Boat&Air</option>
+      <option value="6">Charity&Causes</option>
+      <option value="7">Community</option>
+      <option value="8">Family&Education</option>
+      <option value="9">Fashion</option>
+      <option value="10">Film&Media</option>
+      <option value="11">Hobbies</option>
+      <option value="12">Home&Lifestyle</option>
+      <option value="13">Performing&Visual Arts</option>
+      <option value="14">Government</option>
+      <option value="15">Spirituality</option>
+      <option value="16">School Activities</option>
+      <option value="17">Science&Tech</option>
+      <option value="18">Holiday</option>
+      <option value="19">Sports</option>
+      <option value="20">Travel&Outdoor</option>
+      <option value="21">Other</option>
+    </select>
+    <div class="hobby1-square">
+      <h3>Event Results</h3>
     </div>
-    <div class="column hobby1-list">
-        <h2>{{userBody}}</h2>
-        {{!-- for each Hobby create div structure --}}
-        <div class="hobby1-square">
-            <h3>{{req.userBody.hobbies-signup}}</h3>
-        </div>
-        <div class="hobby1-square">
-            <h3>Event Results</h3>
-        </div>
+  </div>
+  <div class="column hobby2-list">
+    <h2>{{userBody}}</h2>
+    <select
+      class="form-select form-select-lg mb-3"
+      aria-label=".form-select-lg example">
+      <option selected>Open this select menu</option>
+      <option value="1">Business</option>
+      <option value="2">Food&Drink</option>
+      <option value="3">Health</option>
+      <option value="4">Music</option>
+      <option value="5">Auto,Boat&Air</option>
+      <option value="6">Charity&Causes</option>
+      <option value="7">Community</option>
+      <option value="8">Family&Education</option>
+      <option value="9">Fashion</option>
+      <option value="10">Film&Media</option>
+      <option value="11">Hobbies</option>
+      <option value="12">Home&Lifestyle</option>
+      <option value="13">Performing&Visual Arts</option>
+      <option value="14">Government</option>
+      <option value="15">Spirituality</option>
+      <option value="16">School Activities</option>
+      <option value="17">Science&Tech</option>
+      <option value="18">Holiday</option>
+      <option value="19">Sports</option>
+      <option value="20">Travel&Outdoor</option>
+      <option value="21">Other</option>
+    </select>
+    <div class="hobby2-square">
+      <h3>Event Results</h3>
     </div>
-    <div class="column hobby2-list">
-        <h2>{{userBody}}</h2>
-        {{!-- for each hobby create div structure --}}
-        <div class="hobby2-square">
-            <h3>{{req.userBody.hobbies-signup}}</h3>
-        </div>
-         <div class="hobby2-square">
-            <h3>Event Results</h3>
-        </div>
+  </div>
+  <div class="column hobby3-list">
+    <h2>{{userBody}}</h2>
+    <select
+      class="form-select form-select-lg mb-3"
+      aria-label=".form-select-lg example">
+      <option selected>Open this select menu</option>
+      <option value="1">Business</option>
+      <option value="2">Food&Drink</option>
+      <option value="3">Health</option>
+      <option value="4">Music</option>
+      <option value="5">Auto,Boat&Air</option>
+      <option value="6">Charity&Causes</option>
+      <option value="7">Community</option>
+      <option value="8">Family&Education</option>
+      <option value="9">Fashion</option>
+      <option value="10">Film&Media</option>
+      <option value="11">Hobbies</option>
+      <option value="12">Home&Lifestyle</option>
+      <option value="13">Performing&Visual Arts</option>
+      <option value="14">Government</option>
+      <option value="15">Spirituality</option>
+      <option value="16">School Activities</option>
+      <option value="17">Science&Tech</option>
+      <option value="18">Holiday</option>
+      <option value="19">Sports</option>
+      <option value="20">Travel&Outdoor</option>
+      <option value="21">Other</option>
+    </select>
+    <div class="hobby3-square">
+      <h3>Event Results</h3>
     </div>
-        <div class="column hobby3-list">
-        <h2>{{userBody}}</h2>
-        {{!-- for each hobby create div structure --}}
-        <div class="hobby3-square">
-            <h3>{{req.userBody.hobbies-signup}}</h3>
-        </div>
-        <div class="hobby3-square">
-            <h3>Event Results</h3>
-        </div>
-    </div>
+  </div>
 
 </div>
-
-
-

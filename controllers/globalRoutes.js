@@ -18,21 +18,21 @@ router.post("/login", async (req, res) => {
       where: { username: req.body.username },
     });
 
-    if(!userData) {
-        return res.render('/login', { message: 'user not found' })
-    };
+    if (!userData) {
+      return res.render("/login", { message: "user not found" });
+    }
 
     const isValid = await userData.checkPass(req.body.password);
-    
+
     if (isValid) {
-        req.session.save (() => {
-        req.session.is_logged_in = true
-        req.session.email = true,
-        req.session.user = {
+      req.session.save(() => {
+        req.session.is_logged_in = true;
+        (req.session.email = true),
+          (req.session.user = {
             username: userData.username,
             hobbies: userData.hobbies,
-        };
-    });
+          });
+      });
       console.log(userData);
     } else {
       console.log("try again");
@@ -50,7 +50,7 @@ router.get("/home", (req, res) => {
 });
 
 router.post("/home"),
-  async(req, res) => {
+  async (req, res) => {
     try {
       const user = await User.create(req.body);
       res.redirect("/home");
@@ -64,25 +64,68 @@ router.get("/user", (req, res) => {
 });
 
 router.post("/api/users", async (req, res) => {
-    try {
-      const user = await User.create(req.body);
-      res.render("user");
-    } catch (err) {
-      console.log(err);
+  try {
+    const user = await User.create(req.body);
+    req.session.save(() => {
+      req.session.user_id = user.id;
+      req.session.logged_in = true;
+      
+      res.redirect('/home');
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+
+router.post('/login', async (req, res) => {
+  try {
+    const userData = await User.findOne({ where: { email: req.body.email } });
+
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
     }
-  });
+
+    const validPassword = await userData.checkPass(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      
+      res.redirect('/home');
+    });
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 
 router.get("/contact", (req, res) => {
   res.render("contact");
 });
 
 router.post("/contact", async (req, res) => {
-    try {
-      const user = await Contact.create(req.body);
-      res.render("contact");
-    } catch (err) {
-      console.log(err);
-    }
-  });
+  try {
+    const user = await Contact.create(req.body);
+    res.render("contact");
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.get("/logout", (req, res) => {
+  res.render("logout");
+});
 
 module.exports = router;

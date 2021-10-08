@@ -1,4 +1,4 @@
-#ACTIVE API for Eventbrite
+API for Eventbrite
 <!-- can i add to .env file for use when calling the API key -->
 
 API key TPFXAH4P5IPEN2JWW4
