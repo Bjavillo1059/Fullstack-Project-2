@@ -1,5 +1,13 @@
 /* LOGIN HANDLEBARS */
 
+#logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 60px;
+}
+
 #wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -9,49 +17,50 @@
 
 header {
     background-color: #213259;
-    height: 150px;
-    padding: 4px;
+    padding: 10px;
+    height: 75px;
 }
 
-header h1 {
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-    line-height: 50px;
+#navlogo{
+  display: block;
+  float: left;
 }
 
-header h2 {
-    font-variant: small-caps;
-    text-align: center;
-    color: #fff;
+.navbar-brand img{
+  padding-left: 15px;
+  padding-right: 30px;
+  height: 40px;
+  display: block;
+  align-items: center;
 }
 
-.main_menu {
-    padding: 5px 0 5px 0;
-    text-align: center;
-    line-height: 32px;
-    background-color: #213259;
+#navbarNav li {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  padding-right: 10px;
+  font-weight: 900;
+  font-size: 1.2em;
 }
 
-ul.main_menu {
-    margin-top: 15px;
+#navSearch {
+  float: right;
+  display: inline-block;
+  align-items: center;
 }
 
-.main_menu li {
-    display: inline;
-    padding: 0 10px 0 10px;
-    font-size: 20px;
+#navbarNav li a {
+  text-decoration: none;
+  color: white;
 }
 
-.main_menu a {
-    text-decoration: none;
-    color: #fff;
-    padding: 8px;
-    font-variant: small-caps;
+#navbarNav li a:hover {
+  text-decoration: underline;
 }
 
-.main_menu a:hover {
-    color: #59d5d8;
+#navbarNav ul {
+  display: inline-block;
+  text-align: center;
+  float: right;
 }
 
 #Login {
@@ -59,9 +68,10 @@ ul.main_menu {
   height: 100vh;
   width: 40vw;
   margin: auto;
+  margin-top: 25px;
 }
 
-.btn {
+#loginbtn {
   background: white;
   font-family: "Roboto", sans-serif;
   font-weight: 300;

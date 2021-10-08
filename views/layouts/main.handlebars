@@ -13,26 +13,35 @@
   </head>
 
   <body>
-    <div id="wrapper">
-      <header>
-        <h1>Freshcapade</h1>
-        <h2>Your one stop spot!</h2>
-      </header>
-
-      <nav id="nav-bar">
-        <ul class="main_menu">
-          <li><a class="nav-link" href="/">Home</a></li>
-
-          <li><a class="nav-link" href="#">Logout</a></li>
-
-          <li><a class="nav-link" href="/login">Login</a></li>
-
-          <li><a class="nav-link" href="#">About</a></li>
-<!--add contact us to list this filepath may not work for anyone -->
-          <li><a class="nav-link" href="/views/contact.handlebars">Contact</a></li>
-        </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" id="navlogo" href="/home">
+          <img src="images/logo.png" alt="freshcapade logo">
+          </a>
+          <div class="collapse navbar-collapse">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarNav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/user">Profile</a>
+                </li> 
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Logout</a>
+                </li>
+              </ul>
+               <form id="navSearch" class="form-inline">
+                <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-lg-0" type="submit">Search</button>
+              </form>
+            </div>
+        </div>
       </nav>
-    </div>
+    </header>  
     <main>
       <div class="gallery">
         {{{body}}}
