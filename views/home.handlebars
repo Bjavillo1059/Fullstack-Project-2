@@ -1,16 +1,41 @@
-<h2>
-    {{!-- app logo --}}
-</h2>
+<div class="flex-row userBody">
+    {{!-- Friends Colum --}}
+    <div class="column search-results">
+        <h2>Search Results</h2>
+        
+    </div>
+    <div class="column hobby1-list">
+        <h2>{{userBody}}</h2>
+        {{!-- for each Hobby create div structure --}}
+        <div class="hobby1-square">
+            <h3>{{req.userBody.hobbies-signup}}</h3>
+        </div>
+        <div class="hobby1-square">
+            <h3>Event Results</h3>
+        </div>
+    </div>
+    <div class="column hobby2-list">
+        <h2>{{userBody}}</h2>
+        {{!-- for each hobby create div structure --}}
+        <div class="hobby2-square">
+            <h3>{{req.userBody.hobbies-signup}}</h3>
+        </div>
+         <div class="hobby2-square">
+            <h3>Event Results</h3>
+        </div>
+    </div>
+        <div class="column hobby3-list">
+        <h2>{{userBody}}</h2>
+        {{!-- for each hobby create div structure --}}
+        <div class="hobby3-square">
+            <h3>{{req.userBody.hobbies-signup}}</h3>
+        </div>
+        <div class="hobby3-square">
+            <h3>Event Results</h3>
+        </div>
+    </div>
 
-<div>
-    {{!-- search block --}}
 </div>
-<div>
-    {{!-- display block of results --}}
-</div>
-<div>
-    {{!-- keyword search --}}
-</div>
-<div>
-    {{!-- profile photo and profile information --}}
-</div>
+
+
+

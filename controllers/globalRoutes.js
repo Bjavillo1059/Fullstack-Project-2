@@ -30,7 +30,7 @@ router.post("/login", async (req, res) => {
         req.session.email = true,
         req.session.user = {
             username: userData.username,
-            bio: userData.bio,
+            hobbies: userData.hobbies,
         };
     });
       console.log(userData);
