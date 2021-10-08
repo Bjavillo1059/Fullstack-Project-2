@@ -30,7 +30,6 @@ router.post("/login", async (req, res) => {
         (req.session.email = true),
           (req.session.user = {
             username: userData.username,
-            hobbies: userData.hobbies,
           });
       });
       console.log(userData);
@@ -70,7 +69,7 @@ router.post("/api/users", async (req, res) => {
       req.session.user_id = user.id;
       req.session.logged_in = true;
       
-      res.redirect('/home');
+      res.redirect('/api/users');
     });
   } catch (err) {
     console.log(err);
@@ -102,7 +101,7 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
       
-      res.redirect('/home');
+      res.redirect('/api/users');
     });
 
   } catch (err) {
