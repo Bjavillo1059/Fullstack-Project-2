@@ -28,7 +28,7 @@ Events.init(
       defaultValue: DataTypes.NOW,
     },
     author: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         references: {
             model: 'user',
             key: 'id'
@@ -40,7 +40,7 @@ Events.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "events",
   }
 );
 

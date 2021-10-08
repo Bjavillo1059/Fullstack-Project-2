@@ -2,13 +2,13 @@ const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
-class User extends Model {
+class Contact extends Model {
   checkPass(password) {
     return bcrypt.compare(password, this.password);
   }
 }
 
-User.init(
+Contact.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -20,17 +20,21 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      validate: {
+        len: [16],
+      },
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    hobbies: {
+    subject: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    message: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   },
   {
@@ -45,8 +49,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "contact",
   }
 );
 
-module.exports = User 
+module.exports = Contact 
