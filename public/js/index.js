@@ -8,12 +8,11 @@ for (let i = 0; i < dropdowns.length; i++) {
 };
 
 function usePredictHQ(eventsData) {
-    var query = "https://api.predicthq.com/v1/events?limit=5" // append categories from predicthq /
-    var headers = {
+    let query = "https://api.predicthq.com/v1/events?limit=5" // append categories from predicthq /
+    let headers = {
       "Content-Type": "application/json",
-      "Authorization": "Bearer ooYMC7ioSzvttiyL-wfE6TW1VesS6ekt3uS4_RZZ"
-    
-    }
+      "Authorization": "Bearer ooYMC7ioSzvttiyL-wfE6TW1VesS6ekt3uS4_RZZ",    
+    };
   
     fetch(query, {
       method: "GET",
@@ -25,14 +24,37 @@ function usePredictHQ(eventsData) {
       .then(data => {
         console.log(data)
         categories = data
-        usePredictHQ(data)
-      })
-  }
+        // usePredictHQ(data)
+      });      
+  };
 
-  function usePredictHQ(categories) {
+// function usePredictHQ(eventsData) {
+//     var query = "https://api.predicthq.com/v1/events?limit=5" // append categories from predicthq /
+//     var headers = {
+//       "Content-Type": "application/json",
+//       "Authorization": "Bearer ooYMC7ioSzvttiyL-wfE6TW1VesS6ekt3uS4_RZZ"
+    
+//     }
+  
+//     fetch(query, {
+//       method: "POST",
+//       headers,
+//       body: JSON.stringify()
+//     })
+//       .then(res => {
+//         return res.json()
+//       })
+//       .then(data => {
+//         console.log(data)
+//         usePredictHQ(data)
+//       })
+//   }
+// <img class="thumbnail" src="${data.results[1].title}">
+
+  function usePredictHQ(data) {
     document.querySelector('#search-0').innerHTML = `
     <div class="columns medium-7" id="search-image-div">
-  <img class="thumbnail" src="${categories.foods[0].photo.highres}">
+  <p class="size-weight" value="serving-size">${data.results[1].title}</p>
   </div>
     `
   }
