@@ -48,7 +48,7 @@ router.get("/home", (req, res) => {
   res.render("home");
 });
 
-router.post("/home"),
+router.post("/home",
   async (req, res) => {
     try {
       const user = await User.create(req.body);
@@ -56,7 +56,7 @@ router.post("/home"),
     } catch (err) {
       console.log(err);
     }
-  };
+  });
 
 router.get("/user", (req, res) => {
   res.render("user");
